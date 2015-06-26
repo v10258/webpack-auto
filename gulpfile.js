@@ -7,10 +7,10 @@ var reload = browserSync.reload;
 var spritesmith = require('gulp.spritesmith');
 
 var paths = {
-    src: 'assets',          // css js img 开发目录
-    less: 'less',           // less 开发目录
-    dist: 'dist',           // release 发行目录
-    html: '*.html'          // html 页面
+    src: 'assets', // css js img 开发目录
+    less: 'less', // less 开发目录
+    dist: 'dist', // release 发行目录
+    html: '*.html' // html 页面
 };
 
 
@@ -35,7 +35,7 @@ gulp.task('minify-js', function() {
 
 
 // 合并脚本 ['minify-js']
-gulp.task('concat', 'minify-js', function() {
+gulp.task('concat', ['minify-js'], function() {
     console.log(plugins.util.colors.green('Concat files'));
 
     return gulp.src([paths.dist + '/**/*.js', '!' + paths.dist + '/js/all.js'])
