@@ -3,13 +3,13 @@
 gulp 前端自动化构建规则 demo
 
 ###检查脚本
-  gulp.task('lint', function() {
-      console.log(plugins.util.colors.green('Linting'));
-  
-      return gulp.src(paths.js)
-          .pipe(plugins.jshint())
-          .pipe(plugins.jshint.reporter('default'));
-  });
+    gulp.task('lint', function() {
+        console.log(plugins.util.colors.green('Linting'));
+    
+        return gulp.src(paths.js)
+            .pipe(plugins.jshint())
+            .pipe(plugins.jshint.reporter('default'));
+    });
 
 
 
