@@ -17,17 +17,17 @@ gulp 前端自动化构建规则 demo
         devCss: 'assets/css'                    // less 生成指向css开发目录
     }
 ##命令工具
-###静态服务器 + 监视 less/html 文件
+#####静态服务器 + 监视 less/html 文件
     gulp
     
-###发布
+#####发布
     gulp release
     
-###编译Less
+#####编译Less
     gulp less
     
-###压缩图片
+#####压缩图片
     gulp images
 
-###生成css sprite 图片和样式表
+#####生成css sprite 图片和样式表
     gulp sprite
