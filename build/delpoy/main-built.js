@@ -1,5 +1,6 @@
 
 
+
 require(function($) {
 
     var timer;
@@ -59,3 +60,4 @@ require(function($) {
     });
     
 });
+define("main", function(){});

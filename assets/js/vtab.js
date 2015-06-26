@@ -1,6 +1,7 @@
 
 
-require(function($) {
+
+require(['jquery'], function($) {
 
     var timer;
     
