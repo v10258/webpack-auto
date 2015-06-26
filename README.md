@@ -3,7 +3,7 @@
 gulp 前端自动化构建规则 demo
 
 
-##配置
+##配置资源路径
     {
         dev: 'assets',
         css: 'assets/css/**/*.css',             // css 开发文件
@@ -16,7 +16,7 @@ gulp 前端自动化构建规则 demo
         build: 'build',                         // release 构建目录
         devCss: 'assets/css'                    // less 生成指向css开发目录
     }
-
+##命令工具
 ###静态服务器 + 监视 less/html 文件
     gulp
     
