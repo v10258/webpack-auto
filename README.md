@@ -11,6 +11,7 @@ gulp 前端自动化构建规则 demo
 * 文件合并
 * 生成css sprite 图片和样式映射
 * requirejsBuild 合并模块
+* 监视 less/html 文件自动刷新
 
 
 ##配置资源路径
