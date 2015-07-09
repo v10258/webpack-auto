@@ -13,7 +13,6 @@ var paths = {
     html: '*.html' // html 页面
 };
 
-
 // 检查脚本
 gulp.task('lint', function() {
     console.log(plugins.util.colors.green('Linting'));
@@ -48,7 +47,8 @@ gulp.task('concat', ['minify-js'], function() {
 gulp.task('less', function() {
     console.log(plugins.util.colors.green('Compile less into CSS'));
 
-    return gulp.src(paths.less + '/**/*.less')
+    gulp.src(paths.less + '/**/*.less')
+        .pipe(plugins.plumber())
         .pipe(plugins.less({
             paths: paths.less + '/lib'
         }))
