@@ -5,6 +5,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 var spritesmith = require('gulp.spritesmith');
+var pngquant = require('imagemin-pngquant');
 
 var paths = {
     src: 'assets', // css js img 开发目录
@@ -47,7 +48,7 @@ gulp.task('concat', ['minify-js'], function() {
 gulp.task('less', function() {
     console.log(plugins.util.colors.green('Compile less into CSS'));
 
-    gulp.src(paths.less + '/**/*.less')
+    gulp.src([paths.less + '/**/*.less', !paths.src + '/lib/base.less'])
         .pipe(plugins.plumber())
         .pipe(plugins.less({
             paths: paths.less + '/lib'
@@ -100,7 +101,9 @@ gulp.task('images', function() {
 
     gulp.src(paths.src + '/**/*.+(png|jpg|gif)')
         .pipe(plugins.imagemin({
-            progressive: true
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
         }))
         .pipe(gulp.dest(paths.dist));
 });
@@ -143,7 +146,9 @@ gulp.task('release', function() {
     // css 图片压缩优化
     gulp.src(paths.src + '/**/*.+(png|jpg|gif)')
         .pipe(plugins.imagemin({
-            progressive: true
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
         }))
         .pipe(gulp.dest(paths.dist));
 
