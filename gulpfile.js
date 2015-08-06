@@ -48,7 +48,7 @@ gulp.task('concat', ['minify-js'], function() {
 gulp.task('less', function() {
     console.log(plugins.util.colors.green('Compile less into CSS'));
 
-    gulp.src([paths.less + '/**/*.less', !paths.src + '/lib/base.less'])
+    gulp.src([paths.less + '/**/*.less', '!' + paths.less + '/lib/*.less'])
         .pipe(plugins.plumber())
         .pipe(plugins.less({
             paths: paths.less + '/lib'
