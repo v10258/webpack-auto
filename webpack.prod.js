@@ -9,7 +9,7 @@ var config = {
     vendor: ['lodash']
   },
   output: {
-    filename: '[name]-[chunkhash:8].js',
+    filename: 'js/[name]-[chunkhash:8].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -82,6 +82,6 @@ config.output.path = path.resolve(__dirname, 'dist/', submodule);
 config.plugins[0] = new HtmlWebpackPlugin({
   template: path.resolve('src/', submodule, entryFileName + '.ejs')
 })
-config.plugins[1] = new ExtractTextPlugin(entryFileName + '-[chunkhash:8].css')
+config.plugins[1] = new ExtractTextPlugin('css/' + entryFileName + '-[chunkhash:8].css')
 
 module.exports = config;
