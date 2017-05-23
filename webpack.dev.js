@@ -30,11 +30,11 @@ var config = {
         }
       }]
     },{
-      test: /\.(ttf|woff|woff2|svg|svgz)(\?.+)?$/,
+      test: /\.(eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
       use: [{
         loader: 'url-loader',
         options: {
-          limit: 10000,
+          limit: 100000,
           name: 'font/[name].[ext]'
         }
       }]
@@ -66,13 +66,15 @@ var config = {
   }
 };
 
-var activeModule = process.argv[5] || 'index';
+// 构建目录，构建入口
+var submodule = process.argv[5] || 'index';
+var entryFileName = submodule;
 
 // 输入输出设置
-config.entry[activeModule] = path.resolve(__dirname, 'src/', activeModule, activeModule + '.js');
-config.output.path = path.resolve(__dirname, 'dist/', activeModule);
+config.entry[entryFileName] = path.resolve(__dirname, 'src/', submodule, entryFileName + '.js');
+config.output.path = path.resolve(__dirname, 'dist/', submodule);
 config.plugins[0] = new HtmlWebpackPlugin({
-  template: path.resolve('src/', activeModule, activeModule + '.ejs')
+  template: path.resolve('src/', submodule, entryFileName + '.ejs')
 })
 
 module.exports = config;

@@ -4,8 +4,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-console.log('argv', process.argv);
-
 var config = {
   entry: {
     vendor: ['lodash']
@@ -37,7 +35,7 @@ var config = {
         }
       }]
     }, {
-      test: /\.(ttf|woff|woff2|svg|svgz)(\?.+)?$/,
+      test: /\.(eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
       use: [{
         loader: 'url-loader',
         options: {
@@ -51,7 +49,7 @@ var config = {
     // 页面集成
     new HtmlWebpackPlugin(),
     // 抽出样式
-    new ExtractTextPlugin('styles.[chunkhash:8].css'),
+    new ExtractTextPlugin('[name].[chunkhash:8].css'),
     // 抽出公共文件vendor依赖，manifest运行时信息
     new webpack.optimize.CommonsChunkPlugin({
       name: ['vendor', 'manifest']
@@ -74,14 +72,16 @@ var config = {
   ]
 };
 
-var activeModule = process.argv[5] || 'index';
+// 构建目录，构建入口
+var submodule = process.argv[5] || 'index';
+var entryFileName = submodule;
 
 // 输入输出设置
-config.entry[activeModule] = path.resolve(__dirname, 'src/', activeModule, activeModule + '.js');
-config.output.path = path.resolve(__dirname, 'dist/', activeModule);
+config.entry[entryFileName] = path.resolve(__dirname, 'src/', submodule, entryFileName + '.js');
+config.output.path = path.resolve(__dirname, 'dist/', submodule);
 config.plugins[0] = new HtmlWebpackPlugin({
-  template: path.resolve('src/', activeModule, activeModule + '.ejs')
+  template: path.resolve('src/', submodule, entryFileName + '.ejs')
 })
-config.plugins[1] = new ExtractTextPlugin(activeModule + '-[chunkhash:8].css')
+config.plugins[1] = new ExtractTextPlugin(entryFileName + '-[chunkhash:8].css')
 
 module.exports = config;

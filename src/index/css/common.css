@@ -1,5 +1,8 @@
+
+@import '../../common/font/iconfont.css';
+
 body {
 	font-size: 100px;
 
-	background: url(../img/bg.jpg) no-repeat center top;
+	/*background: url(../img/bg.jpg) no-repeat center top;*/
 }
