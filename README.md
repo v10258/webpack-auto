@@ -10,14 +10,18 @@
 
 - mock 接口模拟（实现中）
 
-## 开发
-	npm run dev [module-name]
+## 开发默认启动
+	npm run dev 
+	
+## 开发默认构建
+	npm build dev 
+	
+## 开发指定模块（子目录）
+		
+	npm run dev -- --define [module-name]
 
-	npm run dev index
+## 构建指定模块（子目录）
 
-## 构建
-
-	npm run build [module-name]
-
-	npm run build index	
+	npm run build -- --define [module-name]
+	
 
