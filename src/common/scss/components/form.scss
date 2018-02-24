@@ -1,0 +1,114 @@
+@import "../common/variables.scss";
+
+
+.form {
+    .form-group {
+       // margin-bottom: 20px;
+    }
+
+    .vm-label {
+        // display: inline-block;
+        // max-width: 100%;
+        // margin-bottom: 5px;
+        font-size: 16px;
+        //font-weight: 700;
+    }
+
+    .form-control {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .vm-remark {
+        font-size: 12px;
+        color: $text-color-mark;
+        font-weight: normal;
+    }
+}
+
+.checkbox,
+.radio {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    label {
+        min-height: 20px;
+        padding-left: 5px;
+        margin-bottom: 0;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    input {
+        margin-right: 10px;
+    }
+}
+
+
+.form-inline {
+    .vm-control {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+
+    .checkbox,
+    .radio {
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+}
+
+.quantity-control {
+    position: relative;
+    z-index: 1;
+    height: 38px;
+    width: 138px;
+    border: 1px solid $border-color-base;
+    border-radius: $border-radius-sm;
+    overflow: hidden;
+
+    a {
+        position: absolute;
+        top:0;
+        width: 39px;
+        height: 40px;
+        line-height: 36px;
+        font-size: 26px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    input {
+        position: absolute;
+        top:0;
+        left: 40px;
+        width: 58px;
+        height: 40px;
+        padding: 0;
+        line-height: 40px;
+        font-size: 18px;
+        border: none;
+        text-align: center;
+        color: $text-color-dark;
+    }
+
+    .vm-minus {
+        left: 0;
+        border-right: 1px solid $border-color-base;
+    }
+
+    .vm-plus {
+        right: 0;
+        border-left: 1px solid $border-color-base;
+    }
+}
+
+
+

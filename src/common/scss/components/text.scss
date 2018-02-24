@@ -1,0 +1,30 @@
+@import "../common/variables.scss";
+
+// Contextual colors
+.text-primary {
+  color:$brand-primary;
+}
+.text-success {
+  color:$brand-success;
+}
+.text-info {
+  color:$brand-info;
+}
+.text-warning {
+  color:$brand-warning;
+}
+.text-danger {
+  color:$brand-danger;
+}
+
+.text-recommon {
+  color: $text-color-recommon;
+}
+
+.text-mark {
+  color: $text-color-mark;
+}
+
+.text-right {
+  text-align: right;
+}

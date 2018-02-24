@@ -1,0 +1,8 @@
+/* animate */
+.trans { -webkit-transition: all .3s ease-out; transition: all .3s ease-out; }
+
+.anim { -webkit-animation-duration: 1s; -webkit-animation-fill-mode: both; animation-duration: 1s; animation-fill-mode: both; }
+.anim.fast { -webkit-animation-duration: .5s; animation-duration: .5s; }
+.anim.slow { -webkit-animation-duration: 1.5s; animation-duration: 1.5s;}
+.anim.infinite {-webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; }
+.anim.hinge {  -webkit-animation-duration: 2s; animation-duration: 2s; }

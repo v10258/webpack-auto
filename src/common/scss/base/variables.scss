@@ -1,0 +1,92 @@
+//
+// Variables
+// --------------------------------------------------
+
+$color-primary: #1e9780;
+
+
+// Colors
+// Start with assigning color names to specific hex values.
+$white:  #fff !default;
+$black:  #000 !default;
+$red:    #d9534f !default;
+$orange: #f0ad4e !default;
+$yellow: #ffd500 !default;
+$green:  #5cb85c !default;
+$blue:   #0275d8 !default;
+$teal:   #5bc0de !default;
+$pink:   #ff5b77 !default;
+$purple: #613d7c !default;
+
+// Create grayscale
+$gray-dark:                 #292b2c !default;
+$gray:                      #464a4c !default;
+$gray-light:                #636c72 !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+
+// Reassign color vars to semantic color scheme
+$brand-primary:             $blue !default;
+$brand-success:             $green !default;
+$brand-info:                $teal !default;
+$brand-warning:             $orange !default;
+$brand-danger:              $red !default;
+$brand-inverse:             $gray-dark !default;
+
+// Links
+//
+// Style anchor elements.
+$link-color:            $brand-primary !default;
+$link-decoration:       none !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:   1.25rem !default;
+$font-size-sm:   .875rem !default;
+$font-size-xs:   .75rem !default;
+
+$line-height-lg:         1.5 !default;
+$line-height-sm:         1.5 !default;
+
+// border 
+$border-width:              1px;
+
+$border-color-base: 		#e5e5e5;	// 灰色	- 默认边框
+$border-color-disabled:		#acacac;
+$border-color-highlight: 	#00c3f5;	// 浅蓝色 - 选中边框
+
+$border-radius:          .25rem !default;
+$border-radius-lg:       .3rem !default;
+$border-radius-sm:       .2rem !default;
+
+
+// text
+$text-color-base:        #333;			// 灰黑色 页面文本基本色
+$text-color-gray:       #657786;
+$text-color-light:       #d6d7d8;			// 灰色 （面包屑）
+$text-color-dark:        #222;			// 黑色 各种列表项
+$text-color-mark:        #999;
+		
+$text-color-disabled:	 #dedede;
+$text-color-highlight:   #00c3f5;		// 浅蓝色 鼠标指向
+$text-color-recommon:     #e02b41;		// 红色  主辅色
+
+
+//** Global textual link color.
+$link-base-color:       #333;
+$link-hover-color:      #4c9e82;
+$link-hover-decoration: underline;
+
+$bg-base:               #fff;
+$bg-drak:               #f8f8f8;
+$bg-highlight:          #00c3f5;
+$bg-disabled:			#acacac;
+$bg-light:              #e4f2ef;
+
+$font-size-base:          14px;
+$font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
+
+$font-songti:   		'Hiragino Sans GB', '\5B8B\4F53';
+$font-yahei:       		'Hiragino Sans GB', 'Microsoft Yahei';

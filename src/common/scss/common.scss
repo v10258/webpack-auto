@@ -1,0 +1,65 @@
+
+@import "./base/variables.scss";
+@import "./base/reset.scss";
+
+body {
+  color: $text-color-base;
+}
+
+body, button, input, select, textarea {
+  font: 14px/1.5 'PingFangSC', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei','\5b8b\4f53', arial, sans-serif;
+}
+
+a {
+  color: $link-base-color;
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+}
+
+.container {
+  //box-sizing: content-box;
+	position: relative;
+  max-width: 1090px;
+  min-width: 1090px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+#content {
+  padding-top: 84px;
+  padding-bottom: 24px;
+}
+
+.content-column {
+  position: relative;
+  float: left;
+  width:728px;
+}
+
+.content-sidebar {
+  position: relative;
+  float: right;
+  width:300px;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.s-disabled {
+  color: #d8d8d8;
+}
+
+.bs-row {
+    @extend .flex-justify-between;
+    margin: 0 -10px;
+
+    > section,
+    > div {
+        padding: 0 10px;
+    }
+}

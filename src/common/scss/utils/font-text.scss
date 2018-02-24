@@ -1,0 +1,52 @@
+/* text */
+
+.text-indent {text-indent: 2em;}
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.align-baseline    { vertical-align: baseline !important; } // Browser default
+.align-top         { vertical-align: top !important; }
+.align-middle      { vertical-align: middle !important; }
+.align-bottom      { vertical-align: bottom !important; }
+.align-text-bottom { vertical-align: text-bottom !important; }
+.align-text-top    { vertical-align: text-top !important; }
+
+
+.text-space {
+    padding: 0.5em;
+}
+.text-ellipsis { 
+    overflow:hidden; 
+    text-overflow:ellipsis; 
+    white-space:nowrap; 
+}
+
+.font-italic { font-style: italic; }
+.font-bold { 
+    font-weight: bold;
+}
+.font-normal {
+    font-style: normal;
+    font-weight: normal;
+}
+.font-space {
+    padding: 0.5em;
+}
+.fs12 { font-size: 12px; }
+.fs14 { font-size: 14px; }
+.fs16 { font-size: 16px; }
+.fs18 { font-size: 18px; }
+.fs20 { font-size: 20px; }
+.fs24 { font-size: 24px; }
+.yahei { font-family: "Hiragino Sans GB","Microsoft Yahei"; }
+.songti { font-family: "Hiragino Sans GB","\5b8b\4F53"; }
+
+.lineh1{ line-height: 1;}
+.lineh { line-height: 1.5;}
+.lineh2{ line-height: 2;}
+
+.word-break {
+    word-wrap:break-word; 
+    word-break:break-all;
+}

@@ -1,0 +1,39 @@
+.icontag {
+  display: inline-block;
+  line-height: 1;
+
+  &:before {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    content:" ";
+    background: transparent url('../img/icon-sprite32.png') no-repeat;
+    background-size: 100% auto;
+  }
+}
+
+.icontag-academia:before {
+  background-position: 0 -36px;
+}
+
+.icontag-math:before {
+  background-position: 0 -3744px
+}
+
+.icontag-english:before {
+  background-position: 0 -2196px;
+}
+
+.icontag-travel:before {
+  background-position: 0 -6012px;
+}
+
+.icontag-physics:before {
+  background-position: 0 -4536px;
+}
+
+.icontag-3d:before {}
+
+.icontag-3d:before {}
+
+.icontag-3d:before {}
